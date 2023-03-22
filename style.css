@@ -1,9 +1,13 @@
 .grid-container {
     display: flex;
+    flex-direction: column;
+}
+
+.grid-row {
+    display: flex;
 }
 
 .grid-square {
-    display: flex;
     border: 1px solid black;
     aspect-ratio: 1/1;
     height: 30px;
