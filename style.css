@@ -1,0 +1,10 @@
+.grid-container {
+    display: flex;
+}
+
+.grid-square {
+    display: flex;
+    border: 1px solid black;
+    aspect-ratio: 1/1;
+    height: 30px;
+}
