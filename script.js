@@ -2,12 +2,18 @@ let gridSize = 16;
 const gridContainer = document.querySelector(".grid-container");
 createGrid();
 
-// Add event listener to grid size buttons to change grid size
+// Add event listener to grid size buttons
 const gridSizeButtons = document.querySelectorAll(".grid-size");
 gridSizeButtons.forEach((button) => button.addEventListener("click", () => {
     gridSize = button.textContent;
     createGrid();
 }));
+
+// Add event listener to erase button
+const eraseButton = document.querySelector(".erase");
+eraseButton.addEventListener("click", () => {
+    createGrid();
+});
 
 // Create new grid
 function createGrid() {
