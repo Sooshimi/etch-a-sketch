@@ -52,7 +52,10 @@ function createGrid() {
             square.style.backgroundColor = color;
         }
         else if (color === "rainbow") {
-            square.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            square.style.backgroundColor = `rgb(
+                ${Math.floor(Math.random() * 256)}, 
+                ${Math.floor(Math.random() * 256)}, 
+                ${Math.floor(Math.random() * 256)})`;
         }
     }));
 }
