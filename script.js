@@ -1,4 +1,11 @@
 let gridSize = 16;
+
+// Add event listener to grid size buttons to change grid size
+const gridSizeButtons = document.querySelectorAll(".grid-size");
+gridSizeButtons.forEach((button) => button.addEventListener("click", () => {
+    gridSize = button.textContent;
+}));
+
 const gridContainer = document.querySelector(".grid-container");
 
 // Create 16x16 grid
@@ -18,3 +25,4 @@ const gridSquare = document.querySelectorAll(".grid-square");
 gridSquare.forEach((square) => square.addEventListener("mouseover", () => {
     square.style.backgroundColor = "grey";
 }));
+
