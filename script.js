@@ -1,4 +1,5 @@
-let gridSize = 16;
+let gridSize = 32;
+let color = "grey";
 const gridContainer = document.querySelector(".grid-container");
 createGrid();
 
@@ -34,9 +35,24 @@ function createGrid() {
         }
     };
 
-    // Add event listener to each grid square
+    const colorButtons = document.querySelectorAll(".color");
+    colorButtons.forEach((button) => button.addEventListener("click", () => {
+        console.log(button.classList);
+        if (button.classList.contains("grey")) {
+            color = "grey";
+        }
+        else if (button.classList.contains("rainbow")) {
+            color = "rainbow";
+        }
+    }));
+
     const gridSquare = document.querySelectorAll(".grid-square");
     gridSquare.forEach((square) => square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = "grey";
+        if (color === "grey") {
+            square.style.backgroundColor = color;
+        }
+        else if (color === "rainbow") {
+            square.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        }
     }));
 }
