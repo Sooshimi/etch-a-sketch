@@ -1,6 +1,7 @@
 let gridSize = 16;
 const gridContainer = document.querySelector(".grid-container");
 
+// Create 16x16 grid
 for (let i = 0; i < gridSize; i++) {
     const gridRow = document.createElement("div");
     gridRow.classList.add("grid-row");
@@ -12,6 +13,7 @@ for (let i = 0; i < gridSize; i++) {
     }
 };
 
+// Add event listener to each grid square
 const gridSquare = document.querySelectorAll(".grid-square");
 gridSquare.forEach((square) => square.addEventListener("mouseover", () => {
     square.style.backgroundColor = "grey";
